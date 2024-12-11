@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/Apps/Quartus/Exp5_1/mux8.sv
+source_file = 1, D:/Apps/Quartus/Exp5_1/Exp51.bdf
+source_file = 1, D:/Apps/Quartus/Exp5_1/db/Exp51.cbx.xml
+design_name = Exp51
+instance = comp, \Cout~output\, Cout~output, Exp51, 1
+instance = comp, \Cin~output\, Cin~output, Exp51, 1
+instance = comp, \A~input\, A~input, Exp51, 1
+instance = comp, \B~input\, B~input, Exp51, 1
+instance = comp, \CARRY~input\, CARRY~input, Exp51, 1

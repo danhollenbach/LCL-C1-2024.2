@@ -1,0 +1,99 @@
+|Exp53
+S <= mux8:inst.Saida
+A => mux8:inst.a
+B => mux8:inst.b
+C => mux8:inst.c
+D => cod4:inst3.d
+E => cod4:inst3.e
+F => cod4:inst3.f
+G => cod4:inst3.g
+
+
+|Exp53|mux8:inst
+Dado[0] => Mux0.IN7
+Dado[1] => Mux0.IN6
+Dado[2] => Mux0.IN5
+Dado[3] => Mux0.IN4
+Dado[4] => Mux0.IN3
+Dado[5] => Mux0.IN2
+Dado[6] => Mux0.IN1
+Dado[7] => Mux0.IN0
+a => Mux0.IN8
+b => Mux0.IN9
+c => Mux0.IN10
+Saida <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp53|vectorize:inst2
+entradas[0] => ~NO_FANOUT~
+entradas[1] => vector.IN0
+entradas[2] => ~NO_FANOUT~
+entradas[3] => vector.IN1
+entradas[3] => vector.IN0
+entradas[3] => vector.IN0
+entradas[3] => vector.IN1
+entradas[3] => vector.IN0
+entradas[3] => vector.IN1
+entradas[4] => ~NO_FANOUT~
+entradas[5] => ~NO_FANOUT~
+entradas[6] => vector.IN0
+entradas[7] => vector.IN1
+entradas[7] => vector.IN1
+entradas[7] => vector.IN1
+entradas[7] => vector.IN1
+entradas[7] => vector.IN1
+entradas[7] => vector.IN1
+entradas[8] => ~NO_FANOUT~
+entradas[9] => vector.IN0
+entradas[10] => vector.IN1
+entradas[11] => vector.IN1
+entradas[11] => vector.IN1
+entradas[11] => vector.IN1
+entradas[11] => vector.IN1
+entradas[11] => vector.IN1
+entradas[11] => vector.IN1
+entradas[12] => vector.IN1
+entradas[12] => vector.IN1
+entradas[13] => ~NO_FANOUT~
+entradas[14] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+entradas[15] => vector.IN1
+vector[0] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[1] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[2] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[3] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[4] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[5] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[6] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+vector[7] <= vector.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp53|cod4:inst3
+d => Decoder0.IN0
+e => Decoder0.IN1
+f => Decoder0.IN2
+g => Decoder0.IN3
+saida[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[10] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[11] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[12] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[13] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[14] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

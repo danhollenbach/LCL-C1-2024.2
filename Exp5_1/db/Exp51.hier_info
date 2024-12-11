@@ -1,0 +1,25 @@
+|Exp51
+SUM <= mux8S:inst3.Saida
+A => mux8S:inst3.a
+A => mux8C:inst.a
+B => mux8S:inst3.b
+B => mux8C:inst.b
+CARRY => mux8S:inst3.cin
+CARRY => mux8C:inst.cin
+COUT <= mux8C:inst.Saida
+
+
+|Exp51|mux8S:inst3
+a => Mux0.IN8
+b => Mux0.IN9
+cin => Mux0.IN10
+Saida <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp51|mux8C:inst
+a => Mux0.IN8
+b => Mux0.IN9
+cin => Mux0.IN10
+Saida <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
