@@ -1,0 +1,15 @@
+module cod4(
+input logic a,
+input logic b,
+input logic c,
+input logic d,
+output [15:0] saida
+);
+
+always_comb
+begin
+saida = 0;
+saida[{a, b, c, d}] = 1;
+end
+
+endmodule

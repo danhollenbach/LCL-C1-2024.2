@@ -1,0 +1,84 @@
+|Pre3
+LEDG[0] <= decod4:inst1.d
+LEDG[1] <= decod4:inst1.c
+LEDG[2] <= decod4:inst1.b
+LEDG[3] <= decod4:inst1.a
+SW[0] => decod4:inst1.dados[0]
+SW[1] => decod4:inst1.dados[1]
+SW[2] => decod4:inst1.dados[2]
+SW[3] => decod4:inst1.dados[3]
+SW[4] => decod4:inst1.dados[4]
+SW[5] => decod4:inst1.dados[5]
+SW[6] => decod4:inst1.dados[6]
+SW[7] => decod4:inst1.dados[7]
+SW[8] => decod4:inst1.dados[8]
+SW[9] => decod4:inst1.dados[9]
+LEDR[0] <= cod4:inst.saida[0]
+LEDR[1] <= cod4:inst.saida[1]
+LEDR[2] <= cod4:inst.saida[2]
+LEDR[3] <= cod4:inst.saida[3]
+LEDR[4] <= cod4:inst.saida[4]
+LEDR[5] <= cod4:inst.saida[5]
+LEDR[6] <= cod4:inst.saida[6]
+LEDR[7] <= cod4:inst.saida[7]
+LEDR[8] <= cod4:inst.saida[8]
+LEDR[9] <= cod4:inst.saida[9]
+
+
+|Pre3|decod4:inst1
+dados[0] => a.IN0
+dados[0] => d.IN0
+dados[1] => a.IN1
+dados[2] => b.IN1
+dados[3] => b.IN1
+dados[3] => d.IN1
+dados[4] => b.IN1
+dados[4] => c.IN0
+dados[4] => d.IN1
+dados[5] => b.IN1
+dados[5] => c.IN1
+dados[6] => c.IN1
+dados[7] => c.IN1
+dados[7] => d.IN1
+dados[8] => d.IN1
+dados[9] => ~NO_FANOUT~
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre3|cod4:inst
+a => saida.IN0
+a => saida.IN0
+a => saida.IN0
+b => saida.IN1
+b => saida.IN1
+b => saida.IN1
+c => saida.IN1
+c => saida.IN1
+c => saida.IN1
+c => saida.IN1
+c => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+d => saida.IN1
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[8] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[9] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+

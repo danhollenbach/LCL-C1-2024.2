@@ -1,0 +1,40 @@
+|Pre1
+A <= decod4:inst.a
+E[0] => decod4:inst.dados[0]
+E[1] => decod4:inst.dados[1]
+E[2] => decod4:inst.dados[2]
+E[3] => decod4:inst.dados[3]
+E[4] => decod4:inst.dados[4]
+E[5] => decod4:inst.dados[5]
+E[6] => decod4:inst.dados[6]
+E[7] => decod4:inst.dados[7]
+E[8] => decod4:inst.dados[8]
+E[9] => decod4:inst.dados[9]
+B <= decod4:inst.b
+C <= decod4:inst.c
+D <= decod4:inst.d
+
+
+|Pre1|decod4:inst
+dados[0] => a.IN0
+dados[0] => d.IN0
+dados[1] => a.IN1
+dados[2] => b.IN1
+dados[3] => b.IN1
+dados[3] => d.IN1
+dados[4] => b.IN1
+dados[4] => c.IN0
+dados[4] => d.IN1
+dados[5] => b.IN1
+dados[5] => c.IN1
+dados[6] => c.IN1
+dados[7] => c.IN1
+dados[7] => d.IN1
+dados[8] => d.IN1
+dados[9] => ~NO_FANOUT~
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+

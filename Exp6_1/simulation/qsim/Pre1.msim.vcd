@@ -1,0 +1,266 @@
+$comment
+	File created using the following command:
+		vcd file Pre1.msim.vcd -direction
+$end
+$date
+	Thu Dec 19 07:38:50 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Pre1_vlg_vec_tst $end
+$var reg 10 ! E [9:0] $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ C $end
+$var wire 1 % D $end
+$var wire 1 & sampler $end
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - E[9]~input_o $end
+$var wire 1 . A~output_o $end
+$var wire 1 / B~output_o $end
+$var wire 1 0 C~output_o $end
+$var wire 1 1 D~output_o $end
+$var wire 1 2 E[0]~input_o $end
+$var wire 1 3 E[1]~input_o $end
+$var wire 1 4 inst|a~combout $end
+$var wire 1 5 E[2]~input_o $end
+$var wire 1 6 E[5]~input_o $end
+$var wire 1 7 E[4]~input_o $end
+$var wire 1 8 inst|b~0_combout $end
+$var wire 1 9 E[3]~input_o $end
+$var wire 1 : inst|b~combout $end
+$var wire 1 ; E[7]~input_o $end
+$var wire 1 < E[6]~input_o $end
+$var wire 1 = inst|c~0_combout $end
+$var wire 1 > E[8]~input_o $end
+$var wire 1 ? inst|d~0_combout $end
+$var wire 1 @ inst|d~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+x"
+x#
+x$
+x%
+x&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+x.
+x/
+x0
+x1
+02
+03
+x4
+05
+06
+07
+x8
+09
+x:
+0;
+0<
+x=
+0>
+x?
+x@
+$end
+#3268
+18
+#3384
+0?
+#3598
+0=
+#3705
+0@
+#3930
+04
+#4274
+0:
+#5950
+00
+0$
+#6394
+01
+0%
+#7401
+0/
+0#
+#7773
+0.
+0"
+#10000
+b1000000000 !
+1-
+0&
+#30000
+b1100000000 !
+b100000000 !
+0-
+1&
+#30686
+1>
+#33773
+1?
+#34078
+1@
+#36751
+11
+1%
+#50000
+b110000000 !
+b10000000 !
+0&
+#50670
+1;
+#50850
+0>
+#53865
+1=
+#56223
+10
+1$
+#70000
+b11000000 !
+b1000000 !
+1&
+#70670
+1<
+#70832
+0;
+#74302
+0?
+#74623
+0@
+#77312
+01
+0%
+#90000
+b1100000 !
+b100000 !
+0&
+#90680
+16
+#90832
+0<
+#93698
+08
+#94288
+1:
+#97438
+1/
+1#
+#110000
+b110000 !
+b10000 !
+1&
+#110670
+17
+#110842
+06
+#113569
+1?
+#113874
+1@
+#116547
+11
+1%
+#130000
+b11000 !
+b1000 !
+0&
+#130670
+19
+#130832
+07
+#133706
+0=
+#133713
+18
+#136058
+00
+0$
+#150000
+b1100 !
+b100 !
+1&
+#150690
+15
+#150832
+09
+#153968
+0?
+#154289
+0@
+#156978
+01
+0%
+#170000
+b110 !
+b10 !
+0&
+#170660
+13
+#170852
+05
+#174260
+0:
+#174305
+14
+#174633
+1:
+#178059
+1.
+1"
+#190000
+b11 !
+b1 !
+1&
+#190660
+12
+#190822
+03
+#194187
+1@
+#196860
+11
+1%
+#210000
+b0 !
+0&
+#210822
+02
+#214635
+0@
+#214796
+04
+#215140
+0:
+#217324
+01
+0%
+#218267
+0/
+0#
+#218639
+0.
+0"
+#1000000

@@ -1,0 +1,74 @@
+# do Pre2.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Pre2
+# 
+# Top level modules:
+# 	Pre2
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Pre2_vlg_sample_tst
+# -- Compiling module Pre2_vlg_check_tst
+# ** Error: Waveform.vwf.vt(182): (vlog-2730) Undefined variable: 'A_expected'.
+# 
+# ** Error: Waveform.vwf.vt(188): (vlog-2730) Undefined variable: 'B_expected'.
+# 
+# ** Error: Waveform.vwf.vt(194): (vlog-2730) Undefined variable: 'C_expected'.
+# 
+# ** Error: Waveform.vwf.vt(200): (vlog-2730) Undefined variable: 'D_expected'.
+# 
+# -- Compiling module Pre2_vlg_vec_tst
+# ** Error: Waveform.vwf.vt(392): (vlog-2110) Illegal reference to net "B0".
+# 
+# ** Error: Waveform.vwf.vt(393): (vlog-2110) Illegal reference to net "B0".
+# 
+# ** Error: Waveform.vwf.vt(399): (vlog-2110) Illegal reference to net "B1".
+# 
+# ** Error: Waveform.vwf.vt(400): (vlog-2110) Illegal reference to net "B1".
+# 
+# ** Error: Waveform.vwf.vt(401): (vlog-2110) Illegal reference to net "B1".
+# 
+# ** Error: Waveform.vwf.vt(407): (vlog-2110) Illegal reference to net "B2".
+# 
+# ** Error: Waveform.vwf.vt(408): (vlog-2110) Illegal reference to net "B2".
+# 
+# ** Error: Waveform.vwf.vt(409): (vlog-2110) Illegal reference to net "B2".
+# 
+# ** Error: Waveform.vwf.vt(415): (vlog-2110) Illegal reference to net "B3".
+# 
+# ** Error: Waveform.vwf.vt(416): (vlog-2110) Illegal reference to net "B3".
+# 
+# ** Error: Waveform.vwf.vt(417): (vlog-2110) Illegal reference to net "B3".
+# 
+# ** Error: Waveform.vwf.vt(423): (vlog-2110) Illegal reference to net "B4".
+# 
+# ** Error: Waveform.vwf.vt(424): (vlog-2110) Illegal reference to net "B4".
+# 
+# ** Error: Waveform.vwf.vt(425): (vlog-2110) Illegal reference to net "B4".
+# 
+# ** Error: Waveform.vwf.vt(431): (vlog-2110) Illegal reference to net "B5".
+# 
+# ** Error: Waveform.vwf.vt(432): (vlog-2110) Illegal reference to net "B5".
+# 
+# ** Error: Waveform.vwf.vt(433): (vlog-2110) Illegal reference to net "B5".
+# 
+# ** Error: Waveform.vwf.vt(439): (vlog-2110) Illegal reference to net "B6".
+# 
+# ** Error: Waveform.vwf.vt(440): (vlog-2110) Illegal reference to net "B6".
+# 
+# ** Error: Waveform.vwf.vt(441): (vlog-2110) Illegal reference to net "B6".
+# 
+# ** Error: Waveform.vwf.vt(447): (vlog-2110) Illegal reference to net "B7".
+# 
+# ** Error: Waveform.vwf.vt(448): (vlog-2110) Illegal reference to net "B7".
+# 
+# ** Error: Waveform.vwf.vt(449): (vlog-2110) Illegal reference to net "B7".
+# 
+# ** Error: Waveform.vwf.vt(455): (vlog-2110) Illegal reference to net "B8".
+# 
+# ** Error: Waveform.vwf.vt(456): (vlog-2110) Illegal reference to net "B8".
+# 
+# ** Error: Waveform.vwf.vt(457): (vlog-2110) Illegal reference to net "B8".
+# 
+# ** Error: d:/apps/quartus/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./Pre2.do line 4
