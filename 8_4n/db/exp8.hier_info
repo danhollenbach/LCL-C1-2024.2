@@ -1,0 +1,65 @@
+|exp8
+COUNT[0] <= vector:inst21.data[0]
+COUNT[1] <= vector:inst21.data[1]
+COUNT[2] <= vector:inst21.data[2]
+RESET => inst20.IN0
+RESET => inst20.IN1
+CLOCK => inst1.CLK
+CLOCK => inst.CLK
+CLOCK => inst2.CLK
+
+
+|exp8|vector:inst21
+a => Decoder0.IN1
+a => Decoder2.IN2
+b => Decoder1.IN1
+b => Decoder2.IN1
+c => Decoder0.IN0
+c => Decoder1.IN0
+c => Decoder2.IN0
+data[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp8|kdois:inst10
+q0 => result.IN0
+q0 => result.IN0
+q1 => result.IN1
+q1 => result.IN1
+q2 => result.IN1
+q2 => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp8|kzero:inst12
+q0 => result.IN0
+q1 => result.IN1
+q2 => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp8|kum:inst11
+q0 => result.IN0
+q0 => result.IN0
+q1 => result.IN1
+q1 => result.IN1
+q2 => result.IN1
+q2 => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp8|jum:inst8
+q0 => result.IN0
+q1 => result.IN1
+q2 => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp8|jzero:inst9
+q0 => result.IN0
+q1 => result.IN1
+q2 => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/vector.sv
+source_file = 1, D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/Exp84.bdf
+source_file = 1, D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/Waveform.vwf
+source_file = 1, D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/db/Exp84.cbx.xml
+design_name = Exp84
+instance = comp, \COUNT[2]~output , COUNT[2]~output, Exp84, 1
+instance = comp, \COUNT[1]~output , COUNT[1]~output, Exp84, 1
+instance = comp, \COUNT[0]~output , COUNT[0]~output, Exp84, 1
+instance = comp, \CLOCK~input , CLOCK~input, Exp84, 1
+instance = comp, \inst~0 , inst~0, Exp84, 1
+instance = comp, \RESET~input , RESET~input, Exp84, 1

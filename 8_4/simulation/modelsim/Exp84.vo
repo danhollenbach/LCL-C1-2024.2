@@ -1,0 +1,172 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "01/22/2025 17:47:36"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Exp84 (
+	COUNT,
+	RESET,
+	CLOCK);
+output 	[2:0] COUNT;
+input 	RESET;
+input 	CLOCK;
+
+// Design Ports Information
+// COUNT[2]	=>  Location: PIN_C13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// COUNT[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// COUNT[0]	=>  Location: PIN_A6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLOCK	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// RESET	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Exp84_v.sdo");
+// synopsys translate_on
+
+wire \COUNT[2]~output_o ;
+wire \COUNT[1]~output_o ;
+wire \COUNT[0]~output_o ;
+wire \CLOCK~input_o ;
+wire \inst~0_combout ;
+wire \RESET~input_o ;
+wire \inst~q ;
+
+
+// Location: IOOBUF_X29_Y31_N2
+cycloneiv_io_obuf \COUNT[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\COUNT[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \COUNT[2]~output .bus_hold = "false";
+defparam \COUNT[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y31_N2
+cycloneiv_io_obuf \COUNT[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\COUNT[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \COUNT[1]~output .bus_hold = "false";
+defparam \COUNT[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X10_Y31_N2
+cycloneiv_io_obuf \COUNT[0]~output (
+	.i(\inst~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\COUNT[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \COUNT[0]~output .bus_hold = "false";
+defparam \COUNT[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y31_N1
+cycloneiv_io_ibuf \CLOCK~input (
+	.i(CLOCK),
+	.ibar(gnd),
+	.o(\CLOCK~input_o ));
+// synopsys translate_off
+defparam \CLOCK~input .bus_hold = "false";
+defparam \CLOCK~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X12_Y30_N12
+cycloneiv_lcell_comb \inst~0 (
+// Equation(s):
+// \inst~0_combout  = !\inst~q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\inst~q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\inst~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst~0 .lut_mask = 16'h0F0F;
+defparam \inst~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y31_N8
+cycloneiv_io_ibuf \RESET~input (
+	.i(RESET),
+	.ibar(gnd),
+	.o(\RESET~input_o ));
+// synopsys translate_off
+defparam \RESET~input .bus_hold = "false";
+defparam \RESET~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: FF_X12_Y30_N13
+dffeas inst(
+	.clk(\CLOCK~input_o ),
+	.d(\inst~0_combout ),
+	.asdata(vcc),
+	.clrn(!\RESET~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam inst.is_wysiwyg = "true";
+defparam inst.power_up = "low";
+// synopsys translate_on
+
+assign COUNT[2] = \COUNT[2]~output_o ;
+
+assign COUNT[1] = \COUNT[1]~output_o ;
+
+assign COUNT[0] = \COUNT[0]~output_o ;
+
+endmodule

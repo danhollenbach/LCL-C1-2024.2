@@ -1,6 +1,6 @@
 EDA Netlist Writer report for Exp84
-Tue Jan 21 10:07:28 2025
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Jan 22 17:47:36 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -8,7 +8,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. EDA Netlist Writer Messages
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
 
 
 
@@ -34,11 +36,50 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jan 21 10:07:28 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed Jan 22 17:47:36 2025 ;
 ; Revision Name             ; Exp84                                 ;
 ; Top-level Entity Name     ; Exp84                                 ;
-; Family                    ; Cyclone II                            ;
+; Family                    ; Cyclone IV GX                         ;
+; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------+
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_6_1200mv_85c_slow.vo     ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_6_1200mv_0c_slow.vo      ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_min_1200mv_0c_fast.vo    ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84.vo                       ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_6_1200mv_85c_v_slow.sdo  ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_6_1200mv_0c_v_slow.sdo   ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_min_1200mv_0c_v_fast.sdo ;
+; D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/Exp84_v.sdo                    ;
++-----------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -46,14 +87,21 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 21 10:07:27 2025
-Info: Command: quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Exp84 -c Exp84 --vector_source=C:/Users/aluno/Desktop/8_4/Waveform.vwf --testbench_file=./simulation/qsim/Exp84.vt
-Info (201000): Generated Verilog Test Bench File ./simulation/qsim/Exp84.vt for simulation
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Jan 22 17:47:35 2025
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Exp84 -c Exp84
+Info (204019): Generated file Exp84_6_1200mv_85c_slow.vo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_6_1200mv_0c_slow.vo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_min_1200mv_0c_fast.vo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84.vo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_6_1200mv_85c_v_slow.sdo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_6_1200mv_0c_v_slow.sdo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_min_1200mv_0c_v_fast.sdo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Exp84_v.sdo in folder "D:/Usuario/햞ea de trabalho/EAD/2024.1/APC/LCL-C1-2024.2/8_4/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4515 megabytes
-    Info: Processing ended: Tue Jan 21 10:07:28 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4593 megabytes
+    Info: Processing ended: Wed Jan 22 17:47:37 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -1,20 +1,24 @@
 |Exp84
-COUNT[0] <= vector:inst13.data[0]
-COUNT[1] <= vector:inst13.data[1]
-COUNT[2] <= vector:inst13.data[2]
+COUNT[0] <= vector:inst21.data[0]
+COUNT[1] <= vector:inst21.data[1]
+COUNT[2] <= vector:inst21.data[2]
+RESET => inst20.IN0
+RESET => inst20.IN1
+CLOCK => inst.CLK
 CLOCK => inst1.CLK
 CLOCK => inst2.CLK
-CLOCK => inst.CLK
-RESET => inst6.IN0
-RESET => inst6.IN1
 
 
-|Exp84|vector:inst13
-a => data[0].DATAIN
-b => data[1].DATAIN
-c => data[2].DATAIN
-data[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
-data[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
-data[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+|Exp84|vector:inst21
+a => Decoder0.IN1
+a => Decoder2.IN2
+b => Decoder1.IN1
+b => Decoder2.IN1
+c => Decoder0.IN0
+c => Decoder1.IN0
+c => Decoder2.IN0
+data[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
