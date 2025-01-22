@@ -1,0 +1,41 @@
+|Exp82n
+HEX0[0] <= decoder7:inst11.Out[0]
+HEX0[1] <= decoder7:inst11.Out[1]
+HEX0[2] <= decoder7:inst11.Out[2]
+HEX0[3] <= decoder7:inst11.Out[3]
+HEX0[4] <= decoder7:inst11.Out[4]
+HEX0[5] <= decoder7:inst11.Out[5]
+HEX0[6] <= decoder7:inst11.Out[6]
+KEY[3] => inst5.IN0
+LEDG[8] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp82n|decoder7:inst11
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp82n|vector:inst10
+a => data[0].DATAIN
+b => data[1].DATAIN
+c => data[2].DATAIN
+d => data[3].DATAIN
+data[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+

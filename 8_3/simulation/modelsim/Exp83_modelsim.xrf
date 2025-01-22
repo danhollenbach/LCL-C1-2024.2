@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/aluno/Desktop/8_3/vector.sv
+source_file = 1, C:/Users/aluno/Desktop/8_3/Exp83.bdf
+source_file = 1, C:/Users/aluno/Desktop/8_3/Waveform.vwf
+source_file = 1, C:/Users/aluno/Desktop/8_3/db/Exp83.cbx.xml
+design_name = Exp83
+instance = comp, \CLOCK~I , CLOCK, Exp83, 1
+instance = comp, \CLOCK~clkctrl , CLOCK~clkctrl, Exp83, 1
+instance = comp, \inst~feeder , inst~feeder, Exp83, 1
+instance = comp, \RESET~I , RESET, Exp83, 1
+instance = comp, \inst14~0 , inst14~0, Exp83, 1
+instance = comp, \inst2~0 , inst2~0, Exp83, 1
+instance = comp, \inst3~feeder , inst3~feeder, Exp83, 1
+instance = comp, \COUNT[3]~I , COUNT[3], Exp83, 1
+instance = comp, \COUNT[2]~I , COUNT[2], Exp83, 1
+instance = comp, \COUNT[1]~I , COUNT[1], Exp83, 1
+instance = comp, \COUNT[0]~I , COUNT[0], Exp83, 1
