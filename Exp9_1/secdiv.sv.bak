@@ -1,0 +1,12 @@
+module secdiv(
+input [5:0] seconds,
+output [3:0] unit,
+output [3:0] decimal
+);
+
+integer remainder = seconds % 10;
+integer result = seconds / 10;
+assign unit = remainder;
+assign decimal = result;
+
+endmodule

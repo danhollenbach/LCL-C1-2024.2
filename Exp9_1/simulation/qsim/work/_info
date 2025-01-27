@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Downloads\contador-20250127T205012Z-001\contador\simulation\qsim
+vtimer
+Z1 IAM4O`X1gM6PPB^IoEbYi[1
+Z2 Vg2A=5e8]jknBQ3`cZbN0Q3
+Z3 dD:\Downloads\contador-20250127T205012Z-001\contador\simulation\qsim
+Z4 w1738012624
+Z5 8timer.vo
+Z6 Ftimer.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|timer.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 5Bjh=1X8d@3WCKLhDCFX^3
+!s85 0
+Z11 !s108 1738012625.395000
+Z12 !s107 timer.vo|
+!s101 -O0
+vtimer_vlg_check_tst
+!i10b 1
+Z13 !s100 dZ_WDm6X[f;5K7FN9Cz443
+Z14 I1fXkCAO3@AKa>UC2^O6JP0
+Z15 V<`CKVXe6<z7e_m>NgAk;l2
+R3
+Z16 w1738012623
+Z17 8Waveform3.vwf.vt
+Z18 FWaveform3.vwf.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z19 !s108 1738012625.536000
+Z20 !s107 Waveform3.vwf.vt|
+Z21 !s90 -work|work|Waveform3.vwf.vt|
+!s101 -O0
+R9
+vtimer_vlg_sample_tst
+!i10b 1
+Z22 !s100 9z95KQOMa1_GB5?DmTJZS0
+Z23 I6XUPmPYJez94;8BJ7f`b72
+Z24 V[N6m9fC@EUXU:U0]Se:dJ2
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vtimer_vlg_vec_tst
+!i10b 1
+Z25 !s100 GHTBbzL>64TDV9[e688m:3
+Z26 IKXNlc^B_0Q7nGEK:VoKLf0
+Z27 VAl?cbDe7`4Fcm]j;8m6Cc1
+R3
+R16
+R17
+R18
+Z28 L0 229
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
