@@ -3,7 +3,7 @@ $comment
 		vcd file timer.msim.vcd -direction
 $end
 $date
-	Mon Jan 27 18:17:06 2025
+	Mon Jan 27 18:19:39 2025
 $end
 $version
 	ModelSim Version 10.1d
@@ -231,14 +231,14 @@ $var wire 1 ;" inst2|WideOr3~0_combout $end
 $var wire 1 <" inst2|WideOr4~0_combout $end
 $var wire 1 =" inst2|WideOr5~0_combout $end
 $var wire 1 >" inst2|WideOr6~0_combout $end
-$var wire 1 ?" inst|q [3] $end
-$var wire 1 @" inst|q [2] $end
-$var wire 1 A" inst|q [1] $end
-$var wire 1 B" inst|q [0] $end
-$var wire 1 C" inst6|q [3] $end
-$var wire 1 D" inst6|q [2] $end
-$var wire 1 E" inst6|q [1] $end
-$var wire 1 F" inst6|q [0] $end
+$var wire 1 ?" inst6|q [3] $end
+$var wire 1 @" inst6|q [2] $end
+$var wire 1 A" inst6|q [1] $end
+$var wire 1 B" inst6|q [0] $end
+$var wire 1 C" inst|q [3] $end
+$var wire 1 D" inst|q [2] $end
+$var wire 1 E" inst|q [1] $end
+$var wire 1 F" inst|q [0] $end
 $var wire 1 G" inst5|q [5] $end
 $var wire 1 H" inst5|q [4] $end
 $var wire 1 I" inst5|q [3] $end
@@ -516,7 +516,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j
@@ -545,8 +545,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 13!
 1m
 1i
@@ -579,7 +579,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 0q
 1p
 0m
@@ -603,9 +603,9 @@ $end
 0D
 10!
 11!
-0A"
-1@"
-0B"
+0E"
+1D"
+0F"
 1m
 0i
 1h
@@ -634,7 +634,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j
@@ -660,8 +660,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 1m
 1i
 0j
@@ -682,7 +682,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 03!
 12!
 0q
@@ -744,10 +744,10 @@ $end
 0D
 10!
 11!
-1?"
-0A"
-0@"
-0B"
+1C"
+0E"
+0D"
+0F"
 13!
 1m
 1g
@@ -781,7 +781,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 02!
 1r
 0m
@@ -804,8 +804,8 @@ $end
 11!
 1s
 1t
-0?"
-0B"
+0C"
+0F"
 03!
 0r
 1m
@@ -848,7 +848,7 @@ $end
 11!
 0s
 0t
-1B"
+1F"
 1q
 0m
 1j
@@ -877,8 +877,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 13!
 1m
 1i
@@ -911,7 +911,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 0q
 1p
 0m
@@ -935,9 +935,9 @@ $end
 0D
 10!
 11!
-0A"
-1@"
-0B"
+0E"
+1D"
+0F"
 1m
 0i
 1h
@@ -966,7 +966,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j
@@ -992,8 +992,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 1m
 1i
 0j
@@ -1014,7 +1014,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 03!
 12!
 0q
@@ -1048,10 +1048,10 @@ $end
 0D
 10!
 11!
-1?"
-0A"
-0@"
-0B"
+1C"
+0E"
+0D"
+0F"
 13!
 1m
 1g
@@ -1085,7 +1085,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 02!
 1r
 0m
@@ -1108,8 +1108,8 @@ $end
 11!
 1s
 1t
-0?"
-0B"
+0C"
+0F"
 03!
 0r
 1m
@@ -1179,7 +1179,7 @@ $end
 11!
 0s
 0t
-1B"
+1F"
 1q
 0m
 1j
@@ -1208,8 +1208,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 13!
 1m
 1i
@@ -1242,7 +1242,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 0q
 1p
 0m
@@ -1266,9 +1266,9 @@ $end
 0D
 10!
 11!
-0A"
-1@"
-0B"
+0E"
+1D"
+0F"
 1m
 0i
 1h
@@ -1297,7 +1297,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j
@@ -1323,8 +1323,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 1m
 1i
 0j
@@ -1345,7 +1345,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 03!
 12!
 0q
@@ -1379,10 +1379,10 @@ $end
 0D
 10!
 11!
-1?"
-0A"
-0@"
-0B"
+1C"
+0E"
+0D"
+0F"
 13!
 1m
 1g
@@ -1416,7 +1416,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 02!
 1r
 0m
@@ -1439,8 +1439,8 @@ $end
 11!
 1s
 1t
-0?"
-0B"
+0C"
+0F"
 03!
 0r
 1m
@@ -1480,7 +1480,7 @@ $end
 11!
 0s
 0t
-1B"
+1F"
 1q
 0m
 1j
@@ -1509,8 +1509,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 13!
 1m
 1i
@@ -1543,7 +1543,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 0q
 1p
 0m
@@ -1567,9 +1567,9 @@ $end
 0D
 10!
 11!
-0A"
-1@"
-0B"
+0E"
+1D"
+0F"
 1m
 0i
 1h
@@ -1598,7 +1598,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j
@@ -1624,8 +1624,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 1m
 1i
 0j
@@ -1646,7 +1646,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 03!
 12!
 0q
@@ -1680,10 +1680,10 @@ $end
 0D
 10!
 11!
-1?"
-0A"
-0@"
-0B"
+1C"
+0E"
+0D"
+0F"
 13!
 1m
 1g
@@ -1717,7 +1717,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 02!
 1r
 0m
@@ -1740,8 +1740,8 @@ $end
 11!
 1s
 1t
-0?"
-0B"
+0C"
+0F"
 03!
 0r
 1m
@@ -1836,7 +1836,7 @@ $end
 11!
 0s
 0t
-1B"
+1F"
 1q
 0m
 1j
@@ -1865,8 +1865,8 @@ $end
 0D
 10!
 11!
-1A"
-0B"
+1E"
+0F"
 13!
 1m
 1i
@@ -1899,7 +1899,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 0q
 1p
 0m
@@ -1923,9 +1923,9 @@ $end
 0D
 10!
 11!
-0A"
-1@"
-0B"
+0E"
+1D"
+0F"
 1m
 0i
 1h
@@ -1954,7 +1954,7 @@ $end
 0D
 10!
 11!
-1B"
+1F"
 1q
 0m
 1j

@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dD:\Downloads\contador-20250127T205012Z-001\contador\simulation\qsim
 vtimer
-Z1 IAM4O`X1gM6PPB^IoEbYi[1
+Z1 IN92`UOUnP[2a7nOF3n50z3
 Z2 Vg2A=5e8]jknBQ3`cZbN0Q3
-Z3 dD:\Downloads\contador-20250127T205012Z-001\contador\simulation\qsim
-Z4 w1738012624
+Z3 dD:\Apps\Quartus\Exp9_1\simulation\qsim
+Z4 w1738012776
 Z5 8timer.vo
 Z6 Ftimer.vo
 L0 31
@@ -17,9 +17,9 @@ r1
 Z8 !s90 -work|work|timer.vo|
 Z9 o-work work -O0
 !i10b 1
-Z10 !s100 5Bjh=1X8d@3WCKLhDCFX^3
+Z10 !s100 Bb_lQLjDEk;6TB2iZFa1Z0
 !s85 0
-Z11 !s108 1738012625.395000
+Z11 !s108 1738012777.441000
 Z12 !s107 timer.vo|
 !s101 -O0
 vtimer_vlg_check_tst
@@ -28,7 +28,7 @@ Z13 !s100 dZ_WDm6X[f;5K7FN9Cz443
 Z14 I1fXkCAO3@AKa>UC2^O6JP0
 Z15 V<`CKVXe6<z7e_m>NgAk;l2
 R3
-Z16 w1738012623
+Z16 w1738012775
 Z17 8Waveform3.vwf.vt
 Z18 FWaveform3.vwf.vt
 L0 61
@@ -36,7 +36,7 @@ R7
 r1
 !s85 0
 31
-Z19 !s108 1738012625.536000
+Z19 !s108 1738012777.789000
 Z20 !s107 Waveform3.vwf.vt|
 Z21 !s90 -work|work|Waveform3.vwf.vt|
 !s101 -O0
