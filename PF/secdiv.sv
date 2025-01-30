@@ -1,16 +1,10 @@
-module secdiv (
-input [5:0] segundos,
-output [3:0] first,
-output [3:0] second
+module secdiv(
+input [5:0] seconds,
+output [3:0] unit,
+output [3:0] decimal
 );
 
-integer count = 0;
-assign first[0] = segundos[4];
-assign first[1] = segundos[5];
-assign first[2] = 0;
-assign first[3] = 0;
-assign second[0] = segundos[0];
-assign second[1] = segundos[1];
-assign second[2] = segundos[2];
-assign second[3] = segundos[3];
+assign unit = seconds % 10;
+assign decimal = seconds / 10;
+
 endmodule

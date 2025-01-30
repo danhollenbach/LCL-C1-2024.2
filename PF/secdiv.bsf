@@ -26,22 +26,22 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "segundos[5..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "segundos[5..0]" (rect 21 27 78 39)(font "Arial" ))
+		(text "seconds[5..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "seconds[5..0]" (rect 21 27 74 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 208 32)
 		(output)
-		(text "first[3..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "first[3..0]" (rect 152 27 187 39)(font "Arial" ))
+		(text "unit[3..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "unit[3..0]" (rect 154 27 187 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(port
 		(pt 208 48)
 		(output)
-		(text "second[3..0]" (rect 0 0 48 12)(font "Arial" ))
-		(text "second[3..0]" (rect 139 43 187 55)(font "Arial" ))
+		(text "decimal[3..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "decimal[3..0]" (rect 138 43 187 55)(font "Arial" ))
 		(line (pt 208 48)(pt 192 48)(line_width 3))
 	)
 	(drawing

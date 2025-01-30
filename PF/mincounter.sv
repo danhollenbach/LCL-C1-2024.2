@@ -1,19 +1,23 @@
 module mincounter(
 input clk,
-input preset,
+input reset,
 output explosion,
 output [3:0] q
 );
 
-assign q = 5;
-always_ff @(posedge clk)
+always_ff @(posedge clk or posedge reset)
 begin
-	if (q == 0)
-		explosion = 1;
+	if (reset)
+		q <= 5;
 	else
 	begin
-		q = q - 1;
+		if (q == 0)
+			explosion <= 1;
+		else
+		begin
+			q <= q - 1;
+			explosion <= 0;
+		end
 	end
 end
 endmodule
-		

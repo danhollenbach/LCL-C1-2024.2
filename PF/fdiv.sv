@@ -1,25 +1,23 @@
-module fdiv(
+module fdiv (
 input clkin,
-output logic clkout
+output reg clkout
 );
-
-
-
 integer cont;
 
-assign cont = 0;
+initial
+   cont=0;
   
 always @(posedge clkin)
   begin
-	if (cont==25000000)
+	if (cont==2500000)
 		begin
-			cont = 0;
-			clkout = ~clkout;
+			cont<=0;
+			clkout<=~clkout;
 		end
 		else
 		begin
-			cont = cont+1;
-			clkout = clkout;
+			cont<=cont+1;
+			clkout<=clkout;
 		end
    end
 endmodule
