@@ -1,0 +1,12 @@
+module starter(
+input clk,
+output data
+);
+
+always_ff @(posedge clk)
+begin
+	if (clk)
+		data <= 1;
+end
+
+endmodule

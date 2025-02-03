@@ -1,6 +1,6 @@
 Analysis & Synthesis report for timer
-Wed Jan 29 22:24:49 2025
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Mon Feb 03 16:42:15 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,14 +13,16 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Parameter Settings for Inferred Entity Instance: secdiv:inst7|lpm_divide:Mod0
- 12. Parameter Settings for Inferred Entity Instance: secdiv:inst7|lpm_divide:Div0
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: secdiv:inst7|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: secdiv:inst7|lpm_divide:Div0
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,28 +45,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 29 22:24:49 2025      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; timer                                      ;
-; Top-level Entity Name              ; timer                                      ;
-; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 269                                        ;
-;     Total combinational functions  ; 254                                        ;
-;     Dedicated logic registers      ; 76                                         ;
-; Total registers                    ; 76                                         ;
-; Total pins                         ; 61                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total GXB Receiver Channel PCS     ; 0                                          ;
-; Total GXB Receiver Channel PMA     ; 0                                          ;
-; Total GXB Transmitter Channel PCS  ; 0                                          ;
-; Total GXB Transmitter Channel PMA  ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Feb 03 16:42:15 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; timer                                           ;
+; Top-level Entity Name              ; timer                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 184                                             ;
+;     Total combinational functions  ; 169                                             ;
+;     Dedicated logic registers      ; 43                                              ;
+; Total registers                    ; 43                                              ;
+; Total pins                         ; 76                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -72,8 +70,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; timer              ; timer              ;
-; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -112,14 +111,12 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
 ; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                      ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
@@ -127,7 +124,7 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
 ; Report Parameter Settings                                                  ; On                 ; On                 ;
 ; Report Source Assignments                                                  ; On                 ; On                 ;
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
@@ -159,90 +156,119 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; deccounter.sv                    ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/deccounter.sv                                    ;         ;
-; timer.bdf                        ; yes             ; User Block Diagram/Schematic File  ; D:/Apps/Quartus/PF/timer.bdf                                        ;         ;
-; seccounter.sv                    ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/seccounter.sv                                    ;         ;
-; secdiv.sv                        ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/secdiv.sv                                        ;         ;
-; mincounter.sv                    ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/mincounter.sv                                    ;         ;
-; decoder.sv                       ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/decoder.sv                                       ;         ;
-; FDIV.sv                          ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/FDIV.sv                                          ;         ;
-; clocker.sv                       ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/clocker.sv                                       ;         ;
-; LFSRop.sv                        ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/LFSRop.sv                                        ;         ;
-; calculator.sv                    ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/calculator.sv                                    ;         ;
-; LFSRpass.sv                      ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/LFSRpass.sv                                      ;         ;
-; passcreator.sv                   ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/passcreator.sv                                   ;         ;
-; lighter.sv                       ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/lighter.sv                                       ;         ;
-; opcreator.sv                     ; yes             ; User SystemVerilog HDL File        ; D:/Apps/Quartus/PF/opcreator.sv                                     ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/apps/quartus/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/apps/quartus/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/apps/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                       ; d:/apps/quartus/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
-; db/lpm_divide_edm.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/lpm_divide_edm.tdf                            ;         ;
-; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/sign_div_unsign_9kh.tdf                       ;         ;
-; db/alt_u_div_08f.tdf             ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/alt_u_div_08f.tdf                             ;         ;
-; db/add_sub_1tc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/add_sub_1tc.tdf                               ;         ;
-; db/add_sub_2tc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/add_sub_2tc.tdf                               ;         ;
-; db/lpm_divide_blm.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/Apps/Quartus/PF/db/lpm_divide_blm.tdf                            ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; deccounter.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/deccounter.sv              ;         ;
+; timer.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/timer.bdf                  ;         ;
+; seccounter.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/seccounter.sv              ;         ;
+; secdiv.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/secdiv.sv                  ;         ;
+; mincounter.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/mincounter.sv              ;         ;
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/decoder.sv                 ;         ;
+; clocker.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/clocker.sv                 ;         ;
+; LFSRop.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/LFSRop.sv                  ;         ;
+; calculator.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/calculator.sv              ;         ;
+; LFSRpass.sv                      ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/LFSRpass.sv                ;         ;
+; passcreator.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/passcreator.sv             ;         ;
+; lighter.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/lighter.sv                 ;         ;
+; opcreator.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/opcreator.sv               ;         ;
+; check.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/check.sv                   ;         ;
+; latchsr.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/latchsr.sv                 ;         ;
+; zeroer.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/zeroer.sv                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc             ;         ;
+; db/lpm_divide_25m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/lpm_divide_25m.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_08f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/alt_u_div_08f.tdf       ;         ;
+; db/add_sub_1tc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/add_sub_1tc.tdf         ;         ;
+; db/add_sub_2tc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/add_sub_2tc.tdf         ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/db/lpm_divide_vcm.tdf      ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary     ;
-+--------------------------+----------------------+
-; Resource                 ; Usage                ;
-+--------------------------+----------------------+
-; I/O pins                 ; 61                   ;
-; DSP block 9-bit elements ; 0                    ;
-; Maximum fan-out node     ; clocker:inst8|enable ;
-; Maximum fan-out          ; 43                   ;
-; Total fan-out            ; 945                  ;
-; Average fan-out          ; 2.09                 ;
-+--------------------------+----------------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 184              ;
+;                                             ;                  ;
+; Total combinational functions               ; 169              ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 55               ;
+;     -- 3 input functions                    ; 51               ;
+;     -- <=2 input functions                  ; 63               ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 142              ;
+;     -- arithmetic mode                      ; 27               ;
+;                                             ;                  ;
+; Total registers                             ; 43               ;
+;     -- Dedicated logic registers            ; 43               ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 76               ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+; Maximum fan-out node                        ; latchSR:inst14|q ;
+; Maximum fan-out                             ; 27               ;
+; Total fan-out                               ; 638              ;
+; Average fan-out                             ; 2.22             ;
++---------------------------------------------+------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |timer                                    ; 254 (0)           ; 76 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 61   ; 0            ; |timer                                                                                                              ; work         ;
-;    |LFSRop:inst17|                        ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|LFSRop:inst17                                                                                                ; work         ;
-;    |LFSRpass:inst10|                      ; 1 (1)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|LFSRpass:inst10                                                                                              ; work         ;
-;    |calculator:inst15|                    ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|calculator:inst15                                                                                            ; work         ;
-;    |clocker:inst8|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|clocker:inst8                                                                                                ; work         ;
-;    |deccounter:inst|                      ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|deccounter:inst                                                                                              ; work         ;
-;    |decoder7:inst1|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|decoder7:inst1                                                                                               ; work         ;
-;    |decoder7:inst2|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|decoder7:inst2                                                                                               ; work         ;
-;    |decoder7:inst3|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|decoder7:inst3                                                                                               ; work         ;
-;    |decoder7:inst4|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|decoder7:inst4                                                                                               ; work         ;
-;    |fdiv:inst9|                           ; 53 (53)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|fdiv:inst9                                                                                                   ; work         ;
-;    |lighter:inst23|                       ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|lighter:inst23                                                                                               ; work         ;
-;    |mincounter:inst6|                     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|mincounter:inst6                                                                                             ; work         ;
-;    |opcreator:inst18|                     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|opcreator:inst18                                                                                             ; work         ;
-;    |passcreator:inst11|                   ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|passcreator:inst11                                                                                           ; work         ;
-;    |passcreator:inst13|                   ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|passcreator:inst13                                                                                           ; work         ;
-;    |seccounter:inst5|                     ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|seccounter:inst5                                                                                             ; work         ;
-;    |secdiv:inst7|                         ; 63 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7                                                                                                 ; work         ;
-;       |lpm_divide:Div0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0                                                                                 ; work         ;
-;          |lpm_divide_blm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_blm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_blm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
-;                |alt_u_div_08f:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_blm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_08f:divider ; work         ;
-;       |lpm_divide:Mod0|                   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0                                                                                 ; work         ;
-;          |lpm_divide_edm:auto_generated|  ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_edm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_edm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
-;                |alt_u_div_08f:divider|    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_edm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_08f:divider ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; |timer                                    ; 169 (1)           ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 76   ; 0            ; |timer                                                                                                              ; work         ;
+;    |LFSRop:inst17|                        ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|LFSRop:inst17                                                                                                ; work         ;
+;    |LFSRpass:inst10|                      ; 1 (1)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|LFSRpass:inst10                                                                                              ; work         ;
+;    |calculator:inst15|                    ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|calculator:inst15                                                                                            ; work         ;
+;    |clocker:inst19|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|clocker:inst19                                                                                               ; work         ;
+;    |deccounter:inst|                      ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|deccounter:inst                                                                                              ; work         ;
+;    |decoder7:inst1|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|decoder7:inst1                                                                                               ; work         ;
+;    |decoder7:inst2|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|decoder7:inst2                                                                                               ; work         ;
+;    |decoder7:inst3|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|decoder7:inst3                                                                                               ; work         ;
+;    |decoder7:inst4|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|decoder7:inst4                                                                                               ; work         ;
+;    |latchSR:inst14|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|latchSR:inst14                                                                                               ; work         ;
+;    |lighter:inst23|                       ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|lighter:inst23                                                                                               ; work         ;
+;    |mincounter:inst6|                     ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|mincounter:inst6                                                                                             ; work         ;
+;    |opcreator:inst18|                     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|opcreator:inst18                                                                                             ; work         ;
+;    |passcreator:inst11|                   ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|passcreator:inst11                                                                                           ; work         ;
+;    |passcreator:inst13|                   ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|passcreator:inst13                                                                                           ; work         ;
+;    |seccounter:inst5|                     ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|seccounter:inst5                                                                                             ; work         ;
+;    |secdiv:inst7|                         ; 63 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_08f:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_08f:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_08f:divider|    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer|secdiv:inst7|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_08f:divider ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; latchSR:inst14|q                                   ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -250,9 +276,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; inst19                                ; Stuck at VCC due to stuck port preset  ;
 ; mincounter:inst6|q[3]                 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -261,7 +286,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 76    ;
+; Total registers                              ; 43    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 23    ;
@@ -278,18 +303,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; mincounter:inst6|q[0]                   ; 11      ;
 ; mincounter:inst6|q[2]                   ; 11      ;
-; LFSRpass:inst10|senha[5]                ; 3       ;
 ; LFSRop:inst17|op[0]                     ; 2       ;
-; LFSRop:inst17|op[1]                     ; 3       ;
 ; LFSRop:inst17|op[2]                     ; 2       ;
-; LFSRpass:inst10|senha[4]                ; 2       ;
-; LFSRpass:inst10|senha[1]                ; 2       ;
-; LFSRpass:inst10|senha[0]                ; 2       ;
 ; LFSRpass:inst10|senha[6]                ; 2       ;
+; LFSRop:inst17|op[1]                     ; 3       ;
+; LFSRpass:inst10|senha[5]                ; 3       ;
+; LFSRpass:inst10|senha[4]                ; 2       ;
 ; LFSRpass:inst10|senha[3]                ; 2       ;
 ; LFSRpass:inst10|senha[2]                ; 2       ;
+; LFSRpass:inst10|senha[1]                ; 2       ;
+; LFSRpass:inst10|senha[0]                ; 2       ;
 ; Total number of inverted registers = 12 ;         ;
 +-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |timer|calculator:inst15|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -304,7 +338,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LPM_PIPELINE           ; 0              ; Untyped                             ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
-; CBXI_PARAMETER         ; lpm_divide_edm ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                             ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
@@ -327,7 +361,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_PIPELINE           ; 0              ; Untyped                             ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
-; CBXI_PARAMETER         ; lpm_divide_blm ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                             ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
@@ -343,7 +377,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -352,8 +386,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jan 29 22:24:42 2025
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Feb 03 16:42:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timer -c timer
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file deccounter.sv
@@ -386,35 +420,44 @@ Info (12021): Found 1 design units, including 1 entities, in source file lighter
     Info (12023): Found entity 1: lighter
 Info (12021): Found 1 design units, including 1 entities, in source file opcreator.sv
     Info (12023): Found entity 1: opcreator
+Info (12021): Found 1 design units, including 1 entities, in source file check.sv
+    Info (12023): Found entity 1: check
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/starter.sv
+    Info (12023): Found entity 1: starter
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/seed.sv
+    Info (12023): Found entity 1: senha
+Info (12021): Found 1 design units, including 1 entities, in source file latchsr.sv
+    Info (12023): Found entity 1: latchSR
+Info (12021): Found 1 design units, including 1 entities, in source file zeroer.sv
+    Info (12023): Found entity 1: zeroer
 Info (12127): Elaborating entity "timer" for the top level hierarchy
-Warning (275011): Block or symbol "decoder7" of instance "inst3" overlaps another block or symbol
+Warning (275011): Block or symbol "decoder7" of instance "inst2" overlaps another block or symbol
+Warning (275089): Not all bits in bus "LEDG[2..0]" are used
+Warning (275080): Converted elements in bus name "LEDG" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "LEDG[0]" to "LEDG0"
+    Warning (275081): Converted element name(s) from "LEDG[2]" to "LEDG2"
+Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst1"
+Info (12128): Elaborating entity "deccounter" for hierarchy "deccounter:inst"
+Warning (10230): Verilog HDL assignment warning at deccounter.sv(21): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "clocker" for hierarchy "clocker:inst19"
 Info (12128): Elaborating entity "lighter" for hierarchy "lighter:inst23"
 Warning (10762): Verilog HDL Case Statement warning at lighter.sv(19): can't check case statement for completeness because the case expression has too many possible states
-Info (12128): Elaborating entity "calculator" for hierarchy "calculator:inst15"
+Info (12128): Elaborating entity "check" for hierarchy "check:inst12"
 Info (12128): Elaborating entity "passcreator" for hierarchy "passcreator:inst13"
 Info (12128): Elaborating entity "LFSRpass" for hierarchy "LFSRpass:inst10"
-Info (12128): Elaborating entity "clocker" for hierarchy "clocker:inst8"
+Info (12128): Elaborating entity "latchSR" for hierarchy "latchSR:inst14"
+Info (10041): Inferred latch for "q" at latchsr.sv(10)
 Info (12128): Elaborating entity "mincounter" for hierarchy "mincounter:inst6"
 Warning (10230): Verilog HDL assignment warning at mincounter.sv(18): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "seccounter" for hierarchy "seccounter:inst5"
 Warning (10230): Verilog HDL assignment warning at seccounter.sv(21): truncated value with size 32 to match size of target (6)
-Info (12128): Elaborating entity "deccounter" for hierarchy "deccounter:inst"
-Warning (10230): Verilog HDL assignment warning at deccounter.sv(21): truncated value with size 32 to match size of target (4)
-Info (12128): Elaborating entity "fdiv" for hierarchy "fdiv:inst9"
-Info (12128): Elaborating entity "opcreator" for hierarchy "opcreator:inst18"
-Info (12128): Elaborating entity "LFSRop" for hierarchy "LFSRop:inst17"
-Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst1"
 Info (12128): Elaborating entity "secdiv" for hierarchy "secdiv:inst7"
 Warning (10230): Verilog HDL assignment warning at secdiv.sv(7): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at secdiv.sv(8): truncated value with size 32 to match size of target (4)
-Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux0
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux1
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux2
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux3
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux4
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux6
-    Warning (19017): Found clock multiplexer calculator:inst15|Mux5
+Info (12128): Elaborating entity "zeroer" for hierarchy "zeroer:inst20"
+Info (12128): Elaborating entity "calculator" for hierarchy "calculator:inst15"
+Info (12128): Elaborating entity "opcreator" for hierarchy "opcreator:inst18"
+Info (12128): Elaborating entity "LFSRop" for hierarchy "LFSRop:inst17"
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "secdiv:inst7|Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "secdiv:inst7|Div0"
@@ -424,8 +467,8 @@ Info (12133): Instantiated megafunction "secdiv:inst7|lpm_divide:Mod0" with the 
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_edm.tdf
-    Info (12023): Found entity 1: lpm_divide_edm
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_25m.tdf
+    Info (12023): Found entity 1: lpm_divide_25m
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
     Info (12023): Found entity 1: sign_div_unsign_9kh
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_08f.tdf
@@ -440,28 +483,42 @@ Info (12133): Instantiated megafunction "secdiv:inst7|lpm_divide:Div0" with the 
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_blm.tdf
-    Info (12023): Found entity 1: lpm_divide_blm
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file D:/Apps/Quartus/PF/output_files/timer.map.smsg
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[6]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX8[6]" is stuck at GND
+    Warning (13410): Pin "HEX8[5]" is stuck at GND
+    Warning (13410): Pin "HEX8[4]" is stuck at GND
+    Warning (13410): Pin "HEX8[3]" is stuck at GND
+    Warning (13410): Pin "HEX8[2]" is stuck at GND
+    Warning (13410): Pin "HEX8[1]" is stuck at GND
+    Warning (13410): Pin "HEX8[0]" is stuck at GND
+Info (144001): Generated suppressed messages file C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/output_files/timer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 330 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 269 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Wed Jan 29 22:24:49 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 184 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4600 megabytes
+    Info: Processing ended: Mon Feb 03 16:42:15 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Apps/Quartus/PF/output_files/timer.map.smsg.
+The suppressed messages can be found in C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/output_files/timer.map.smsg.
 
 

@@ -5,6 +5,6 @@ output [6:0] correta
 );
 
 always_ff @(posedge clk)
-correta <= senha;
+	correta <= senha;
 
 endmodule 

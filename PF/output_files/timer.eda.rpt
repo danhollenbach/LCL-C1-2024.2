@@ -1,5 +1,5 @@
 EDA Netlist Writer report for timer
-Fri Jan 24 11:27:43 2025
+Mon Feb 03 16:42:29 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Jan 24 11:27:43 2025 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 03 16:42:29 2025 ;
 ; Revision Name             ; timer                                 ;
 ; Top-level Entity Name     ; timer                                 ;
 ; Family                    ; Cyclone II                            ;
@@ -65,13 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                   ;
-+----------------------------------------------------------------------------------------------+
-; Generated Files                                                                              ;
-+----------------------------------------------------------------------------------------------+
-; C:/Users/aluno/Downloads/contador-20250124T140457Z-001/contador/simulation/modelsim/timer.vo ;
-+----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Simulation Generated Files                                                     ;
++--------------------------------------------------------------------------------+
+; Generated Files                                                                ;
++--------------------------------------------------------------------------------+
+; C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/simulation/modelsim/timer.vo ;
++--------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,13 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 11:27:42 2025
+    Info: Processing started: Mon Feb 03 16:42:29 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off timer -c timer
-Info (204019): Generated file timer.vo in folder "C:/Users/aluno/Downloads/contador-20250124T140457Z-001/contador/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file timer.vo in folder "C:/Users/aluno/Desktop/PF-20250203T191149Z-001/PF/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4519 megabytes
-    Info: Processing ended: Fri Jan 24 11:27:43 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon Feb 03 16:42:29 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
