@@ -1,0 +1,22 @@
+
+State Machine - |Exp10|semaforo:inst|state
+Name state.ESTADO_5B state.ESTADO_5A state.ESTADO_45 state.ESTADO_44 state.ESTADO_43 state.ESTADO_42 state.ESTADO_41 state.ESTADO_34 state.ESTADO_33 state.ESTADO_32 state.ESTADO_31 state.ESTADO_2 state.ESTADO_16 state.ESTADO_15 state.ESTADO_14 state.ESTADO_13 state.ESTADO_12 state.ESTADO_11 state.APAGA_TODAS 
+state.APAGA_TODAS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ESTADO_11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ESTADO_12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ESTADO_13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ESTADO_14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ESTADO_15 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ESTADO_16 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ESTADO_2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.ESTADO_31 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ESTADO_32 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ESTADO_33 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_34 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_41 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_42 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_43 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_44 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_45 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_5A 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESTADO_5B 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

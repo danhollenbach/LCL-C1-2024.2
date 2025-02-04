@@ -1,0 +1,39 @@
+|Exp10
+GREEN_C <= semaforo:inst.gc
+SW[0] => semaforo:inst.a
+SW[1] => semaforo:inst.rst
+CLOCK => semaforo:inst.clk
+RED_C <= semaforo:inst.rc
+YELLOW_C <= semaforo:inst.yc
+GREEN_P <= semaforo:inst.gp
+RED_P <= semaforo:inst.rp
+
+
+|Exp10|semaforo:inst
+a => next.ESTADO_5B.DATAB
+a => Selector1.IN1
+a => Selector0.IN1
+a => next.ESTADO_12.DATAB
+a => next.ESTADO_13.DATAB
+a => next.ESTADO_14.DATAB
+a => next.ESTADO_15.DATAB
+a => next.ESTADO_16.DATAB
+a => next.ESTADO_2.DATAB
+a => next.ESTADO_31.DATAB
+a => next.ESTADO_32.DATAB
+a => next.ESTADO_33.DATAB
+a => next.ESTADO_34.DATAB
+a => next.ESTADO_41.DATAB
+a => next.ESTADO_42.DATAB
+a => next.ESTADO_43.DATAB
+a => next.ESTADO_44.DATAB
+a => next.ESTADO_45.DATAB
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+gc <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+rc <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+yc <= yc.DB_MAX_OUTPUT_PORT_TYPE
+gp <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+rp <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+

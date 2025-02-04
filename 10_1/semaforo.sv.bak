@@ -1,0 +1,81 @@
+module semaforo(
+input a, clk, rst
+output gc, rc, yc, gp, rp
+);
+
+int count = 0;
+typedef enum logic [2:0] {APAGA_TODAS, ESTADO_1, ESTADO_2, ESTADO_3, ESTADO_4A, ESTADO_4B, ESTADO_5A, ESTADO_5B} statetype;
+statetype state, next;
+
+always_ff @(posedge clk or posedge rst)
+begin
+	if (rst) state <= APAGA_TODAS;
+	else state <= next;
+end
+
+always_comb
+	case(state)
+		APAGA_TODAS:	if (a) next = ESTADO_5A;
+							else next = ESTADO_1;
+								
+		ESTADO_1:		if (a) next = ESTADO_5A;
+							else
+							begin
+								if (count < 6)
+								begin
+									next = ESTADO_1;
+									count = count + 1;
+								end
+								else
+								begin
+									next = ESTADO_2;
+									count = 0;
+								end
+							end
+		
+		ESTADO_2:		if (a) next = ESTADO_5A;
+							else next = ESTADO_3;	
+		
+		ESTADO_3:		if (a) next = ESTADO_5A;
+							else
+							begin
+								if (count < 4)
+								begin
+									next = ESTADO_3;
+									count = count + 1;
+								end
+								else
+								begin
+									next = ESTADO_4A;
+									count = 0;
+								end
+							end
+		
+		ESTADO_4A:		if (a) next = ESTADO_5A;
+							else 
+							begin
+								count = count + 1;
+								next = ESTADO_4B;
+							end
+		
+		ESTADO_4B:		if (a) next = ESTADO_5A;
+							else
+							begin
+								if (count < 5)
+								begin
+									next = ESTADO_4A;
+									count = count + 1;
+								end
+								else
+								begin
+									next = ESTADO_5A;
+									count = 0;
+								end
+							end
+		
+		ESTADO_5A:		if (a) next = ESTADO_5B;
+							else next = ESTADO_1;
+		
+		ESTADO_5B:		if (a) next = ESTADO_5A;
+							else next = ESTADO_1;
+		
