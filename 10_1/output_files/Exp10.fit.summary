@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Feb 04 09:05:16 2025
+Fitter Status : Successful - Wed Feb 05 16:30:58 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : Exp10
 Top-level Entity Name : Exp10
 Family : Cyclone IV GX
 Device : EP4CGX15BF14C6
 Timing Models : Final
-Total logic elements : 26 / 14,400 ( < 1 % )
-    Total combinational functions : 26 / 14,400 ( < 1 % )
-    Dedicated logic registers : 19 / 14,400 ( < 1 % )
-Total registers : 19
+Total logic elements : 78 / 14,400 ( < 1 % )
+    Total combinational functions : 77 / 14,400 ( < 1 % )
+    Dedicated logic registers : 52 / 14,400 ( < 1 % )
+Total registers : 52
 Total pins : 8 / 81 ( 10 % )
 Total virtual pins : 0
 Total memory bits : 0 / 552,960 ( 0 % )

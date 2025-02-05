@@ -21,9 +21,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 136 168 304 184)
+	(rect 80 136 248 152)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[0]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[0]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 136 184 304 200)
+	(rect 80 184 248 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLOCK" (rect 5 0 43 12)(font "Arial" ))
+	(text "CLOCK_50" (rect 5 0 61 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 136 200 304 216)
+	(rect 80 240 248 256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[1]" (rect 5 0 36 12)(font "Arial" ))
+	(text "KEY[0]" (rect 5 0 41 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -69,9 +69,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 424 168 600 184)
+	(rect 528 168 704 184)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "GREEN_C" (rect 90 0 143 12)(font "Arial" ))
+	(text "GPIO_1[0]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -85,9 +85,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 424 184 600 200)
+	(rect 528 184 704 200)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "RED_C" (rect 90 0 127 12)(font "Arial" ))
+	(text "GPIO_1[1]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -101,9 +101,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 424 200 600 216)
+	(rect 528 200 704 216)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "YELLOW_C" (rect 90 0 150 12)(font "Arial" ))
+	(text "GPIO_1[2]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -117,9 +117,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 424 216 600 232)
+	(rect 528 216 704 232)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "GREEN_P" (rect 90 0 141 12)(font "Arial" ))
+	(text "GPIO_1[3]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -133,9 +133,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 424 232 600 248)
+	(rect 528 232 704 248)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "RED_P" (rect 90 0 126 12)(font "Arial" ))
+	(text "GPIO_1[4]" (rect 90 0 141 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -148,7 +148,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 304 144 424 288)
+	(rect 400 144 520 288)
 	(text "semaforo" (rect 5 0 52 12)(font "Arial" ))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
@@ -176,38 +176,137 @@ applicable agreement for further details.
 		(pt 120 32)
 		(output)
 		(text "gc" (rect 0 0 11 12)(font "Arial" ))
-		(text "gc" (rect 90 27 99 39)(font "Arial" ))
+		(text "gc" (rect 90 27 101 39)(font "Arial" ))
 		(line (pt 120 32)(pt 104 32))
 	)
 	(port
 		(pt 120 48)
 		(output)
 		(text "rc" (rect 0 0 9 12)(font "Arial" ))
-		(text "rc" (rect 92 43 99 55)(font "Arial" ))
+		(text "rc" (rect 92 43 101 55)(font "Arial" ))
 		(line (pt 120 48)(pt 104 48))
 	)
 	(port
 		(pt 120 64)
 		(output)
 		(text "yc" (rect 0 0 12 12)(font "Arial" ))
-		(text "yc" (rect 89 59 99 71)(font "Arial" ))
+		(text "yc" (rect 89 59 101 71)(font "Arial" ))
 		(line (pt 120 64)(pt 104 64))
 	)
 	(port
 		(pt 120 80)
 		(output)
 		(text "gp" (rect 0 0 11 12)(font "Arial" ))
-		(text "gp" (rect 90 75 99 87)(font "Arial" ))
+		(text "gp" (rect 90 75 101 87)(font "Arial" ))
 		(line (pt 120 80)(pt 104 80))
 	)
 	(port
 		(pt 120 96)
 		(output)
 		(text "rp" (rect 0 0 9 12)(font "Arial" ))
-		(text "rp" (rect 92 91 99 103)(font "Arial" ))
+		(text "rp" (rect 92 91 101 103)(font "Arial" ))
 		(line (pt 120 96)(pt 104 96))
 	)
 	(drawing
 		(rectangle (rect 16 16 104 128))
 	)
+)
+(symbol
+	(rect 256 232 304 264)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 21 26 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
+(symbol
+	(rect 256 160 400 240)
+	(text "fdiv" (rect 5 0 25 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clkin" (rect 0 0 22 12)(font "Arial" ))
+		(text "clkin" (rect 21 27 43 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "clkout" (rect 0 0 29 12)(font "Arial" ))
+		(text "clkout" (rect 99 27 128 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 64))
+	)
+)
+(connector
+	(pt 528 176)
+	(pt 520 176)
+)
+(connector
+	(pt 528 192)
+	(pt 520 192)
+)
+(connector
+	(pt 528 208)
+	(pt 520 208)
+)
+(connector
+	(pt 528 224)
+	(pt 520 224)
+)
+(connector
+	(pt 528 240)
+	(pt 520 240)
+)
+(connector
+	(pt 256 248)
+	(pt 248 248)
+)
+(connector
+	(pt 392 208)
+	(pt 392 248)
+)
+(connector
+	(pt 400 208)
+	(pt 392 208)
+)
+(connector
+	(pt 304 248)
+	(pt 392 248)
+)
+(connector
+	(pt 392 176)
+	(pt 392 144)
+)
+(connector
+	(pt 400 176)
+	(pt 392 176)
+)
+(connector
+	(pt 392 144)
+	(pt 248 144)
+)
+(connector
+	(pt 248 192)
+	(pt 256 192)
 )

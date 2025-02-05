@@ -1,12 +1,12 @@
 |Exp10
-GREEN_C <= semaforo:inst.gc
+GPIO_1[0] <= semaforo:inst.gc
+GPIO_1[1] <= semaforo:inst.rc
+GPIO_1[2] <= semaforo:inst.yc
+GPIO_1[3] <= semaforo:inst.gp
+GPIO_1[4] <= semaforo:inst.rp
 SW[0] => semaforo:inst.a
-SW[1] => semaforo:inst.rst
-CLOCK => semaforo:inst.clk
-RED_C <= semaforo:inst.rc
-YELLOW_C <= semaforo:inst.yc
-GREEN_P <= semaforo:inst.gp
-RED_P <= semaforo:inst.rp
+CLOCK_50 => fdiv:inst2.clkin
+KEY[0] => inst1.IN0
 
 
 |Exp10|semaforo:inst
@@ -35,5 +35,42 @@ rc <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 yc <= yc.DB_MAX_OUTPUT_PORT_TYPE
 gp <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 rp <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exp10|fdiv:inst2
+clkin => clkout~reg0.CLK
+clkin => cont[0].CLK
+clkin => cont[1].CLK
+clkin => cont[2].CLK
+clkin => cont[3].CLK
+clkin => cont[4].CLK
+clkin => cont[5].CLK
+clkin => cont[6].CLK
+clkin => cont[7].CLK
+clkin => cont[8].CLK
+clkin => cont[9].CLK
+clkin => cont[10].CLK
+clkin => cont[11].CLK
+clkin => cont[12].CLK
+clkin => cont[13].CLK
+clkin => cont[14].CLK
+clkin => cont[15].CLK
+clkin => cont[16].CLK
+clkin => cont[17].CLK
+clkin => cont[18].CLK
+clkin => cont[19].CLK
+clkin => cont[20].CLK
+clkin => cont[21].CLK
+clkin => cont[22].CLK
+clkin => cont[23].CLK
+clkin => cont[24].CLK
+clkin => cont[25].CLK
+clkin => cont[26].CLK
+clkin => cont[27].CLK
+clkin => cont[28].CLK
+clkin => cont[29].CLK
+clkin => cont[30].CLK
+clkin => cont[31].CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
