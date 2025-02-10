@@ -6,11 +6,9 @@ HEX0[3] <= decoder7:inst1.Out[3]
 HEX0[4] <= decoder7:inst1.Out[4]
 HEX0[5] <= decoder7:inst1.Out[5]
 HEX0[6] <= decoder7:inst1.Out[6]
-KEY[0] => latchSR:inst14.r
-KEY[1] => passcreator:inst11.clk
-KEY[1] => latchSR:inst14.s
-KEY[2] => passcreator:inst13.clk
-KEY[2] => opcreator:inst18.clk
+KEY[0] => inst61.IN0
+KEY[1] => inst71.IN0
+KEY[2] => inst72.IN0
 SW[0] => passcreator:inst13.senha[0]
 SW[1] => passcreator:inst13.senha[1]
 SW[2] => passcreator:inst13.senha[2]
@@ -42,13 +40,13 @@ HEX3[3] <= decoder7:inst2.Out[3]
 HEX3[4] <= decoder7:inst2.Out[4]
 HEX3[5] <= decoder7:inst2.Out[5]
 HEX3[6] <= decoder7:inst2.Out[6]
-HEX4[0] <= passcreator:inst13.correta[0]
-HEX4[1] <= passcreator:inst13.correta[1]
-HEX4[2] <= passcreator:inst13.correta[2]
-HEX4[3] <= passcreator:inst13.correta[3]
-HEX4[4] <= passcreator:inst13.correta[4]
-HEX4[5] <= passcreator:inst13.correta[5]
-HEX4[6] <= passcreator:inst13.correta[6]
+HEX4[0] <= negator:inst81.negada[0]
+HEX4[1] <= negator:inst81.negada[1]
+HEX4[2] <= negator:inst81.negada[2]
+HEX4[3] <= negator:inst81.negada[3]
+HEX4[4] <= negator:inst81.negada[4]
+HEX4[5] <= negator:inst81.negada[5]
+HEX4[6] <= negator:inst81.negada[6]
 HEX5[0] <= zeroer:inst20.out[0]
 HEX5[1] <= zeroer:inst20.out[1]
 HEX5[2] <= zeroer:inst20.out[2]
@@ -113,59 +111,96 @@ q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|timer|fdiv:inst9
+clkin => clkout~reg0.CLK
+clkin => cont[0].CLK
+clkin => cont[1].CLK
+clkin => cont[2].CLK
+clkin => cont[3].CLK
+clkin => cont[4].CLK
+clkin => cont[5].CLK
+clkin => cont[6].CLK
+clkin => cont[7].CLK
+clkin => cont[8].CLK
+clkin => cont[9].CLK
+clkin => cont[10].CLK
+clkin => cont[11].CLK
+clkin => cont[12].CLK
+clkin => cont[13].CLK
+clkin => cont[14].CLK
+clkin => cont[15].CLK
+clkin => cont[16].CLK
+clkin => cont[17].CLK
+clkin => cont[18].CLK
+clkin => cont[19].CLK
+clkin => cont[20].CLK
+clkin => cont[21].CLK
+clkin => cont[22].CLK
+clkin => cont[23].CLK
+clkin => cont[24].CLK
+clkin => cont[25].CLK
+clkin => cont[26].CLK
+clkin => cont[27].CLK
+clkin => cont[28].CLK
+clkin => cont[29].CLK
+clkin => cont[30].CLK
+clkin => cont[31].CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |timer|clocker:inst19
 dis => Decoder0.IN0
-clk => enable~0.DATAA
-enable <= enable~0.DB_MAX_OUTPUT_PORT_TYPE
+clk => enable.DATAA
+enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |timer|lighter:inst23
 correct[0] => Add0.IN1
-correct[0] => disarm~0.IN0
+correct[0] => disarm.IN0
 correct[1] => Add0.IN2
-correct[1] => disarm~0.IN1
+correct[1] => disarm.IN1
 correct[2] => Add1.IN4
-correct[2] => disarm~1.IN1
+correct[2] => disarm.IN1
 correct[3] => Add2.IN6
-correct[3] => disarm~2.IN1
+correct[3] => disarm.IN1
 correct[4] => Add3.IN8
-correct[4] => disarm~3.IN1
+correct[4] => disarm.IN1
 correct[5] => Add4.IN10
-correct[5] => disarm~4.IN1
+correct[5] => disarm.IN1
 correct[6] => Add5.IN12
-correct[6] => disarm~5.IN1
-leds[0] <= leds~1.DB_MAX_OUTPUT_PORT_TYPE
+correct[6] => disarm.IN1
+leds[0] <= leds.DB_MAX_OUTPUT_PORT_TYPE
 leds[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 leds[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 leds[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 leds[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-leds[5] <= leds~0.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= leds.DB_MAX_OUTPUT_PORT_TYPE
 leds[6] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
-disarm <= disarm~5.DB_MAX_OUTPUT_PORT_TYPE
+disarm <= disarm.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |timer|check:inst12
-correct[0] => matching~0.IN0
-correct[1] => matching~1.IN0
-correct[2] => matching~2.IN0
-correct[3] => matching~3.IN0
-correct[4] => matching~4.IN0
-correct[5] => matching~5.IN0
-correct[6] => matching~6.IN0
-attempt[0] => matching~0.IN1
-attempt[1] => matching~1.IN1
-attempt[2] => matching~2.IN1
-attempt[3] => matching~3.IN1
-attempt[4] => matching~4.IN1
-attempt[5] => matching~5.IN1
-attempt[6] => matching~6.IN1
-matching[0] <= matching~0.DB_MAX_OUTPUT_PORT_TYPE
-matching[1] <= matching~1.DB_MAX_OUTPUT_PORT_TYPE
-matching[2] <= matching~2.DB_MAX_OUTPUT_PORT_TYPE
-matching[3] <= matching~3.DB_MAX_OUTPUT_PORT_TYPE
-matching[4] <= matching~4.DB_MAX_OUTPUT_PORT_TYPE
-matching[5] <= matching~5.DB_MAX_OUTPUT_PORT_TYPE
-matching[6] <= matching~6.DB_MAX_OUTPUT_PORT_TYPE
+correct[0] => matching.IN0
+correct[1] => matching.IN0
+correct[2] => matching.IN0
+correct[3] => matching.IN0
+correct[4] => matching.IN0
+correct[5] => matching.IN0
+correct[6] => matching.IN0
+attempt[0] => matching.IN1
+attempt[1] => matching.IN1
+attempt[2] => matching.IN1
+attempt[3] => matching.IN1
+attempt[4] => matching.IN1
+attempt[5] => matching.IN1
+attempt[6] => matching.IN1
+matching[0] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[1] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[2] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[3] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[4] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[5] <= matching.DB_MAX_OUTPUT_PORT_TYPE
+matching[6] <= matching.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |timer|passcreator:inst13
@@ -241,11 +276,11 @@ senha[6] <= senha[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |timer|latchSR:inst14
-r => q~0.IN0
-r => comb~1.IN1
-r => comb~0.IN1
+r => q.IN0
+r => comb.IN1
+r => comb.IN1
 clk => ~NO_FANOUT~
-s => q~0.IN1
+s => q.IN1
 q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -356,6 +391,23 @@ Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|timer|negator:inst81
+senha[0] => negada[0].DATAIN
+senha[1] => negada[1].DATAIN
+senha[2] => negada[2].DATAIN
+senha[3] => negada[3].DATAIN
+senha[4] => negada[4].DATAIN
+senha[5] => negada[5].DATAIN
+senha[6] => negada[6].DATAIN
+negada[0] <= senha[0].DB_MAX_OUTPUT_PORT_TYPE
+negada[1] <= senha[1].DB_MAX_OUTPUT_PORT_TYPE
+negada[2] <= senha[2].DB_MAX_OUTPUT_PORT_TYPE
+negada[3] <= senha[3].DB_MAX_OUTPUT_PORT_TYPE
+negada[4] <= senha[4].DB_MAX_OUTPUT_PORT_TYPE
+negada[5] <= senha[5].DB_MAX_OUTPUT_PORT_TYPE
+negada[6] <= senha[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
 |timer|zeroer:inst20
 out[0] <= <GND>
 out[1] <= <GND>
@@ -367,48 +419,48 @@ out[6] <= <GND>
 
 
 |timer|calculator:inst15
-atempt[0] => result~0.IN0
-atempt[0] => result~7.IN0
-atempt[0] => result~14.IN0
-atempt[1] => result~1.IN0
-atempt[1] => result~8.IN0
-atempt[1] => result~15.IN0
-atempt[2] => result~2.IN0
-atempt[2] => result~9.IN0
-atempt[2] => result~16.IN0
-atempt[3] => result~3.IN0
-atempt[3] => result~10.IN0
-atempt[3] => result~17.IN0
-atempt[4] => result~4.IN0
-atempt[4] => result~11.IN0
-atempt[4] => result~18.IN0
-atempt[5] => result~5.IN0
-atempt[5] => result~12.IN0
-atempt[5] => result~19.IN0
-atempt[6] => result~6.IN0
-atempt[6] => result~13.IN0
-atempt[6] => result~20.IN0
-disarm[0] => result~0.IN1
-disarm[0] => result~7.IN1
-disarm[0] => result~14.IN1
-disarm[1] => result~1.IN1
-disarm[1] => result~8.IN1
-disarm[1] => result~15.IN1
-disarm[2] => result~2.IN1
-disarm[2] => result~9.IN1
-disarm[2] => result~16.IN1
-disarm[3] => result~3.IN1
-disarm[3] => result~10.IN1
-disarm[3] => result~17.IN1
-disarm[4] => result~4.IN1
-disarm[4] => result~11.IN1
-disarm[4] => result~18.IN1
-disarm[5] => result~5.IN1
-disarm[5] => result~12.IN1
-disarm[5] => result~19.IN1
-disarm[6] => result~6.IN1
-disarm[6] => result~13.IN1
-disarm[6] => result~20.IN1
+atempt[0] => result.IN0
+atempt[0] => result.IN0
+atempt[0] => result.IN0
+atempt[1] => result.IN0
+atempt[1] => result.IN0
+atempt[1] => result.IN0
+atempt[2] => result.IN0
+atempt[2] => result.IN0
+atempt[2] => result.IN0
+atempt[3] => result.IN0
+atempt[3] => result.IN0
+atempt[3] => result.IN0
+atempt[4] => result.IN0
+atempt[4] => result.IN0
+atempt[4] => result.IN0
+atempt[5] => result.IN0
+atempt[5] => result.IN0
+atempt[5] => result.IN0
+atempt[6] => result.IN0
+atempt[6] => result.IN0
+atempt[6] => result.IN0
+disarm[0] => result.IN1
+disarm[0] => result.IN1
+disarm[0] => result.IN1
+disarm[1] => result.IN1
+disarm[1] => result.IN1
+disarm[1] => result.IN1
+disarm[2] => result.IN1
+disarm[2] => result.IN1
+disarm[2] => result.IN1
+disarm[3] => result.IN1
+disarm[3] => result.IN1
+disarm[3] => result.IN1
+disarm[4] => result.IN1
+disarm[4] => result.IN1
+disarm[4] => result.IN1
+disarm[5] => result.IN1
+disarm[5] => result.IN1
+disarm[5] => result.IN1
+disarm[6] => result.IN1
+disarm[6] => result.IN1
+disarm[6] => result.IN1
 op[0] => Mux0.IN10
 op[0] => Mux1.IN10
 op[0] => Mux2.IN10

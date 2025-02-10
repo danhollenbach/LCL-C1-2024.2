@@ -8,10 +8,7 @@ output [3:0] q
 always_ff @(posedge clk or posedge reset)
 begin
 	if (reset)
-	begin
-		explosion <= 0;
 		q <= 5;
-	end
 	else
 	begin
 		if (q == 0)

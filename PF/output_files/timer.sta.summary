@@ -3,26 +3,34 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'KEY[2]'
-Slack : -3.134
-TNS   : -9.113
-
-Type  : Slow Model Setup 'seccounter:inst5|clkout'
-Slack : -1.511
-TNS   : -2.467
-
-Type  : Slow Model Setup 'deccounter:inst|clkout'
-Slack : -0.901
-TNS   : -4.311
+Slack : -3.208
+TNS   : -9.607
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -0.301
-TNS   : -0.945
+Slack : -2.829
+TNS   : -63.081
+
+Type  : Slow Model Setup 'seccounter:inst5|clkout'
+Slack : -1.456
+TNS   : -2.388
+
+Type  : Slow Model Setup 'deccounter:inst|clkout'
+Slack : -1.045
+TNS   : -3.929
+
+Type  : Slow Model Setup 'fdiv:inst9|clkout'
+Slack : -0.325
+TNS   : -0.516
 
 Type  : Slow Model Setup 'KEY[1]'
-Slack : 0.144
-TNS   : 0.000
+Slack : -0.185
+TNS   : -0.541
 
 Type  : Slow Model Hold 'CLOCK_50'
+Slack : -5.412
+TNS   : -5.412
+
+Type  : Slow Model Hold 'fdiv:inst9|clkout'
 Slack : 0.391
 TNS   : 0.000
 
@@ -31,20 +39,20 @@ Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Hold 'deccounter:inst|clkout'
-Slack : 0.532
+Slack : 0.819
 TNS   : 0.000
 
 Type  : Slow Model Hold 'KEY[1]'
-Slack : 0.610
+Slack : 0.825
 TNS   : 0.000
 
 Type  : Slow Model Hold 'KEY[2]'
-Slack : 3.758
+Slack : 3.969
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -16.380
+TNS   : -44.380
 
 Type  : Slow Model Minimum Pulse Width 'KEY[2]'
 Slack : -1.222
@@ -58,31 +66,43 @@ Type  : Slow Model Minimum Pulse Width 'deccounter:inst|clkout'
 Slack : -0.500
 TNS   : -7.000
 
+Type  : Slow Model Minimum Pulse Width 'fdiv:inst9|clkout'
+Slack : -0.500
+TNS   : -5.000
+
 Type  : Slow Model Minimum Pulse Width 'seccounter:inst5|clkout'
 Slack : -0.500
 TNS   : -4.000
 
 Type  : Fast Model Setup 'KEY[2]'
-Slack : -1.049
-TNS   : -3.073
-
-Type  : Fast Model Setup 'seccounter:inst5|clkout'
-Slack : -0.471
-TNS   : -0.471
-
-Type  : Fast Model Setup 'deccounter:inst|clkout'
-Slack : 0.123
-TNS   : 0.000
-
-Type  : Fast Model Setup 'KEY[1]'
-Slack : 0.335
-TNS   : 0.000
+Slack : -1.395
+TNS   : -4.179
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : 0.376
+Slack : -0.848
+TNS   : -12.978
+
+Type  : Fast Model Setup 'seccounter:inst5|clkout'
+Slack : -0.421
+TNS   : -0.421
+
+Type  : Fast Model Setup 'KEY[1]'
+Slack : -0.049
+TNS   : -0.198
+
+Type  : Fast Model Setup 'deccounter:inst|clkout'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast Model Setup 'fdiv:inst9|clkout'
+Slack : 0.375
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
+Slack : -3.022
+TNS   : -3.022
+
+Type  : Fast Model Hold 'fdiv:inst9|clkout'
 Slack : 0.215
 TNS   : 0.000
 
@@ -91,20 +111,20 @@ Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Hold 'deccounter:inst|clkout'
-Slack : 0.243
+Slack : 0.367
 TNS   : 0.000
 
 Type  : Fast Model Hold 'KEY[1]'
-Slack : 0.535
+Slack : 0.901
 TNS   : 0.000
 
 Type  : Fast Model Hold 'KEY[2]'
-Slack : 1.891
+Slack : 2.271
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -16.380
+TNS   : -44.380
 
 Type  : Fast Model Minimum Pulse Width 'KEY[2]'
 Slack : -1.222
@@ -117,6 +137,10 @@ TNS   : -8.222
 Type  : Fast Model Minimum Pulse Width 'deccounter:inst|clkout'
 Slack : -0.500
 TNS   : -7.000
+
+Type  : Fast Model Minimum Pulse Width 'fdiv:inst9|clkout'
+Slack : -0.500
+TNS   : -5.000
 
 Type  : Fast Model Minimum Pulse Width 'seccounter:inst5|clkout'
 Slack : -0.500
