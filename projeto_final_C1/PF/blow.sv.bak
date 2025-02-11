@@ -1,0 +1,9 @@
+module blow (
+input explosion,
+output [10:0] ledr,
+output [7:0] ledg
+);
+
+assign ledr = explosion;
+assign ledg = explosion;
+endmodule
