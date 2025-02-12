@@ -3,7 +3,6 @@ input a,b,c,d,e,f,g,
 output [6:0] attempt
 );
 
-// junta os inputs das chaves SW[6..0] em uma senha de 7 bits
 assign attempt[0] = a;
 assign attempt[1] = b;
 assign attempt[2] = c;

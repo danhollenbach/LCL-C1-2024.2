@@ -1,4 +1,4 @@
-// decodificador de numeros de 4 bits para display de 7 segmentos
+
 
 module decoder7 (In, Out);
 	input [3:0] In;

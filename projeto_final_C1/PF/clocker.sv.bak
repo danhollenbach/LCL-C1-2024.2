@@ -4,7 +4,6 @@ input clk,
 output enable
 );
 
-// seleciona o clock com base no CLOCK_50 e no sinal de enable (explosion OR disarm)
 always_comb
 case(dis)
 	0: enable = clk;

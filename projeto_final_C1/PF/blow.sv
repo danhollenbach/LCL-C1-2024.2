@@ -5,6 +5,7 @@ output [10:0] ledr,
 output [7:0] ledg
 );
 
+// caso a bomba exploda, liga todos os LEDR da placa
 always_comb
 case(explosion)
 	0 : ledr = 11'b00000000000;
@@ -12,6 +13,7 @@ case(explosion)
 	default : ledr = 11'b00000000000;
 endcase
 
+// no caso de explosao ou vitoria no jogo, liga todos os LEDG da placa
 assign ledg[0] = explosion | disarm;
 assign ledg[1] = explosion | disarm;
 assign ledg[2] = explosion | disarm;
